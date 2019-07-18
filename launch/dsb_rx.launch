@@ -1,0 +1,276 @@
+<launch>
+
+<!-- sis_bias_writer_section
+
+sis_bias_v_dsb_evaluation2019_dev_writer -->
+
+  <node pkg = "necst-dsb_evaluation2019"
+        name = "sis_bias_v_dsb_evaluation2019_dev_writwer"
+        type = "relay.py">
+    <remap from = '/dsb_evaluation2019/sis_v_cmd' to = '/dsb_evaluation2019/sis/v_cmd'/>
+    <remap from = '/dev/pci3346A/rsw0/ch' to = '/dev/pci3346A/rsw0/ch1'/>
+    <param name = "config_file"
+           value = "$(find necst-dsb_evaluation2019)/node_conf/sis_bias_v_dsb_evaluation2019_dev_writer.conf" />
+  </node>
+
+<!--sis_bias_vgap_dsb_evaluation2019_dsb_evaluation2019_writer-->
+
+  <node pkg = "necst-dsb_evaluation2019"
+        name = "sis_bias_vgap_dsb_evaluation2019_dsb_evaluation2019_writer"
+        type = "relay.py">
+    <remap from = '/dsb_evaluation2019/sis_vgap_cmd' to = '/dsb_evaluation2019/sis/vgap_cmd'/>
+    <remap from = '/dsb_evaluation2019/sis_v_cmd' to = '/dsb_evaluation2019/sis/v_cmd'/>
+    <param name = "config_file"
+           value = "$(find necst-dsb_evaluation2019)/node_conf/sis_bias_vgap_dsb_evaluation2019_dsb_evaluation2019_writer.conf" />
+
+  </node>
+
+<!--sis_bias_vp_dsb_evaluation2019_dsb_evaluation2019-->
+
+  <node pkg = "necst-dsb_evaluation2019"
+        name = "sis_bias_vp_writer"
+        type = "relay.py">
+    <remap from = '/dsb_evaluation2019/sis_vp_cmd' to = '/dsb_evaluation2019/sis/vp_cmd'/>
+    <remap from = '/dsb_evaluation2019/sis_v_cmd' to = '/dsb_evaluation2019/sis/v_cmd'/>
+    <param name = "config_file"
+           value = "$(find necst-dsb_evaluation2019)/node_conf/sis_bias_vp_dsb_evaluation2019_dsb_evaluation2019_writer.conf" />
+
+  </node>
+
+<!--sis_bias_vgap_necst_dsb_evaluation2019-->
+
+  <node pkg = "necst-dsb_evaluation2019"
+        name = "sis_bias_vgap_necst_dsb_evaluation2019"
+        type = "relay.py">
+    <remap from = '/dsb_evaluation2019/sis_vgap_cmd' to = '/dsb_evaluation2019/sis/vgap_cmd'/>
+    <param name = "config_file"
+           value = "$(find necst-dsb_evaluation2019)/node_conf/sis_bias_vgap_necst_dsb_evaluation2019_writer.conf" />
+  </node>
+
+<!--sis_bias_vp_necst_dsb_evaluation2019_writer-->
+
+  <node pkg = "necst-dsb_evaluation2019"
+        name = "sis_bias_vp_necst_dsb_evaluation2019_writer"
+        type = "relay.py">
+    <remap from = '/necst/rx_sisdsb/vp_cmd' to = '/necst/rx_sisdsb/vp1_cmd'/>
+    <remap from = '/dsb_evaluation2019/sis_vp_cmd' to = '/dsb_evaluation2019/sis/vp_cmd'/>
+    <param name = "config_file"
+           value = "$(find necst-dsb_evaluation2019)/node_conf/sis_bias_vp_necst_dsb_evaluation2019_writer.conf" />
+
+  </node>
+
+<!--sis_bias_reader-->
+
+  <node pkg = "necst-dsb_evaluation2019"
+        name = "sis_bias_i_reader"
+        type = "relay.py">
+    <remap from = '/sis_i_cmd' to = '/dsb_evaluation2019/sis/i'/>
+    <remap from = '/dev/pci3177/rsw0/ch' to = '/dev/pci3177/rsw0/ch1'/>
+    <param name = "config_file"
+           value = "$(find necst-dsb_evaluation2019)/node_conf/sis_bias_i_reader.conf" />
+
+  </node>
+
+  <!--sis_bias_v_reader-->
+
+  <node pkg = "necst-dsb_evaluation2019"
+        name = "sis_bias_v_reader"
+        type = "relay.py">
+    <remap from = '/sis_i_cmd' to = '/dsb_evaluation2019/sis/i'/>
+    <remap from = '/dev/pci3177/rsw0/ch' to = '/dev/pci3177/rsw0/ch2'/>
+        <param name = "config_file"
+               value = "$(find necst-dsb_evaluation2019)/node_conf/sis_bias_i_reader.conf" />
+
+  </node>
+
+<!--loatt_section-->
+
+  <node pkg = "necst-dsb_evaluation2019"
+        name = "loatth_icmd_writer"
+        type = "relay.py">
+    <remap from = '/dsb_evaluation2019/loatt/i_cmd' to = '/dsb_evaluation2019/loatt/i_cmd'/>
+    <param name = "config_file"
+           value = "$(find necst-dsb_evaluation2019)/node_conf/loatt_icmd_writer.conf" />
+  </node>
+
+
+  <node pkg = "necst-dsb_evaluation2019"
+        name = "dsb_evaluation2019_loatth_dev_writer"
+        type = "relay.py">
+    <remap from = '/dev/gpdvc15_100rs/i_cmd' to = '/dev/gpdvc15_100rs/ip_192_168_100_44/port_4/i_cmd'/>
+    <remap from = '/dsb_evaluation2019/loatt/i_cmd' to = '/dsb_evaluation2019/loatt/i_cmd'/>
+    <param name = "config_file"
+           value = "$(find necst-dsb_evaluation2019)/node_conf/loatt_dev_writer.conf" />
+  </node>
+
+
+<!--sg_lo_section-->
+
+
+  <node pkg = "necst-dsb_evaluation2019"
+        name = "sg_lo_necst_dsb_evaluation2019_freq_multiwriter"
+        type = "relay.py">
+    <param name = "config_file"
+           value = "$(find necst-dsb_evaluation2019)/node_conf/sg_lo_necst_dsb_evaluation2019_freq_multi_writer.conf" />
+  </node>
+
+
+  <node pkg = "necst-dsb_evaluation2019"
+        name = "sg_lo_necst_dsb_evaluation2019_freq_writer"
+        type = "relay.py">
+    <param name = "config_file"
+           value = "$(find necst-dsb_evaluation2019)/node_conf/sg_lo_necst_dsb_evaluation2019_freq_writer.conf" />
+  </node>
+
+
+  <node pkg = "necst-dsb_evaluation2019"
+        name = "sg_lo_necst_dsb_evaluation2019_power_writer"
+        type = "relay.py">
+    <param name = "config_file"
+           value = "$(find necst-dsb_evaluation2019)/node_conf/sg_lo_necst_dsb_evaluation2019_power_writer.conf" />
+  </node>
+
+
+  <node pkg = "necst-dsb_evaluation2019"
+        name = "sg_lo_necst_dsb_evaluation2019_onoff_writer"
+        type = "relay.py">
+    <param name = "config_file"
+           value = "$(find necst-dsb_evaluation2019)/node_conf/sg_lo_necst_dsb_evaluation2019_onoff_writer.conf" />
+  </node>
+
+
+  <node pkg = "necst-dsb_evaluation2019"
+        name = "sg_lo_dsb_evaluation2019_dev_freq_writer"
+        type = "relay.py">
+    <param name = "config_file"
+           value = "$(find necst-dsb_evaluation2019)/node_conf/sg_lo_dsb_evaluation2019_dev_freq_writer.conf" />
+  </node>
+
+
+  <node pkg = "necst-dsb_evaluation2019"
+        name = "sg_lo_dsb_evaluation2019_dev_power_writer"
+        type = "relay.py">
+    <param name = "config_file"
+           value = "$(find necst-dsb_evaluation2019)/node_conf/sg_lo_dsb_evaluation2019_dev_power_writer.conf" />
+  </node>
+
+
+  <node pkg = "necst-dsb_evaluation2019"
+        name = "sg_lo_dsb_evaluation2019_dev_onoff_writer"
+        type = "relay.py">
+    <param name = "config_file"
+           value = "$(find necst-dsb_evaluation2019)/node_conf/sg_lo_dsb_evaluation2019_dev_onoff_writer.conf" />
+  </node>
+
+
+<!--sa_section
+
+
+  <node pkg = "necst-dsb_evaluation2019"
+        name = "sa_reader"
+        type = "relay.py">
+    <param name = "config_file"
+           value = "$(find necst-dsb_evaluation2019)/node_conf/sa_reader.conf" />
+  </node>
+-->
+
+<!--switch_section
+  <node pkg = "necst-dsb_evaluation2019"
+        name = "switch_cmd_writer"
+        type = "relay.py">
+    <param name = "config_file"
+           value = "$(find necst-dsb_evaluation2019)/node_conf/switch_cmd_writer.conf" />
+  </node>
+
+
+  <node pkg = "necst-dsb_evaluation2019"
+        name = "switch_writer"
+        type = "relay.py">
+    <param name = "config_file"
+           value = "$(find necst-dsb_evaluation2019)/node_conf/switch_writer.conf" />
+  </node>
+-->
+
+<!--dewar_temp_section
+  <node pkg = "necst-dsb_evaluation2019"
+        name = "dewar_temp_reader_ch1"
+        type = "relay.py">
+    <remap from = '/dsb_evaluation2019/dewar/temp' to = '/dsb_evaluation2019/dewar/temp/4k'/>
+    <remap from = '/dev/218/ip_192_168_100_187' to = '/dev/218/ip_192_168_100_187/ch1'/>
+    <param name = "config_file"
+           value = "$(find necst-dsb_evaluation2019)/node_conf/dewar_temp_reader.conf" />
+  </node>
+
+
+  <node pkg = "necst-dsb_evaluation2019"
+        name = "dewar_temp_reader_ch2"
+        type = "relay.py">
+    <remap from = '/dsb_evaluation2019/dewar/temp' to = '/dsb_evaluation2019/dewar/temp/sis1'/>
+    <remap from = '/dev/218/ip_192_168_100_187' to = '/dev/218/ip_192_168_100_187/ch2'/>
+    <param name = "config_file"
+           value = "$(find necst-dsb_evaluation2019)/node_conf/dewar_temp_reader.conf" />
+  </node>
+
+
+  <node pkg = "necst-dsb_evaluation2019"
+        name = "dewar_temp_reader_ch3"
+        type = "relay.py">
+    <remap from = '/dsb_evaluation2019/dewar/temp' to = '/dsb_evaluation2019/dewar/temp/sis2'/>
+    <remap from = '/dev/218/ip_192_168_100_187' to = '/dev/218/ip_192_168_100_187/ch3'/>
+    <param name = "config_file"
+           value = "$(find necst-dsb_evaluation2019)/node_conf/dewar_temp_reader.conf" />
+  </node>
+
+
+  <node pkg = "necst-dsb_evaluation2019"
+        name = "dewar_temp_reader_ch4"
+        type = "relay.py">
+    <remap from = '/dsb_evaluation2019/dewar/temp' to = '/dsb_evaluation2019/dewar/temp/70k'/>
+    <remap from = '/dev/218/ip_192_168_100_187' to = '/dev/218/ip_192_168_100_187/ch4'/>
+    <param name = "config_file"
+           value = "$(find necst-dsb_evaluation2019)/node_conf/dewar_temp_reader.conf" />
+  </node>
+-->
+
+
+<!--dewar_press_section
+  <node pkg = "necst-dsb_evaluation2019"
+        name = "dewar_vacuum_reader"
+        type = "relay.py">
+    <param name = "config_file"
+           value = "$(find necst-dsb_evaluation2019)/node_conf/dewar_vacuum_reader.conf" />
+  </node>
+-->
+
+
+<!--
+
+
+  <node pkg = "necst-dsb_evaluation2019"
+        name = "sis_iv_sim"
+        type = "sis_iv_sim.py">
+  </node>
+
+
+  <node pkg = "necst-dsb_evaluation2019"
+        name = "sa_data_sim"
+        type = "sa_data_sim.py">
+  </node>
+
+
+  <node pkg = "necst-dsb_evaluation2019"
+        name = "temp_data_sim"
+        type = "temp_data_sim.py">
+  </node>
+
+
+  <node pkg = "necst-dsb_evaluation2019"
+        name = "vacuum_data_sim"
+        type = "vacuum_data_sim.py">
+  </node>
+
+-->
+
+
+
+</launch>
