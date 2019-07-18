@@ -40,22 +40,22 @@ class sis(object):
     def __init__(self):
         self.make_pub = make_pub()
 
-    def set_v_vp(self, command):
-        topic_name = '/dsb_evaluation2019/sis_v/vp_cmd'
+    def set_vp(self, command):
+        topic_name = '/dsb_evaluation2019/sis/vp_cmd'
         data_class = std_msgs.msg.Float64
 
         self.make_pub.publish(topic_name, data_class, msg = command)
         return
 
-    def set_v_vgap(self, command):
-        topic_name = '/dsb_evaluation2019/sis_v/vgap_cmd'
+    def set_vgap(self, command):
+        topic_name = '/dsb_evaluation2019/sis/vgap_cmd'
         data_class = std_msgs.msg.Float64
 
         self.make_pub.publish(topic_name, data_class, msg = command)
         return
 
-    def set_v_v(self, command):
-        topic_name = '/dsb_evaluation2019/sis_v/v_cmd'
+    def set_v(self, command):
+        topic_name = '/dsb_evaluation2019/sis/v_cmd'
         data_class = std_msgs.msg.Float64
 
         self.make_pub.publish(topic_name, data_class, msg = command)
