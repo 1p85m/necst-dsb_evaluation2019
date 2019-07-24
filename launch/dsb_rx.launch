@@ -85,6 +85,7 @@ sis_bias_v_dsb_evaluation2019_dev_writer -->
 
 <!--loatt_section-->
 
+<!--
   <node pkg = "necst-dsb_evaluation2019"
         name = "loatth_icmd_writer"
         type = "relay.py">
@@ -102,10 +103,10 @@ sis_bias_v_dsb_evaluation2019_dev_writer -->
     <param name = "config_file"
            value = "$(find necst-dsb_evaluation2019)/node_conf/loatt_dev_writer.conf" />
   </node>
-
+-->
 
 <!--sg_lo_section-->
-
+<!--
 
   <node pkg = "necst-dsb_evaluation2019"
         name = "sg_lo_necst_dsb_evaluation2019_freq_multiwriter"
@@ -162,6 +163,7 @@ sis_bias_v_dsb_evaluation2019_dev_writer -->
            value = "$(find necst-dsb_evaluation2019)/node_conf/sg_lo_dsb_evaluation2019_dev_onoff_writer.conf" />
   </node>
 
+-->
 
 <!--sa_section
 
