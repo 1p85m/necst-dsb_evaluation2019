@@ -16,7 +16,7 @@ sis_bias_v_dsb_evaluation2019_dev_writer -->
 <!--sis_bias_vgap_dsb_evaluation2019_dsb_evaluation2019_writer-->
 
   <node pkg = "necst-dsb_evaluation2019"
-        name = "sis_bias_vgap_dsb_evaluation2019_dsb_evaluation2019_writer"
+        name = "sis_bias_vgap_dsb_evaluation2019_writer"
         type = "relay.py">
     <remap from = '/dsb_evaluation2019/sis_vgap_cmd' to = '/dsb_evaluation2019/sis/vgap_cmd'/>
     <remap from = '/dsb_evaluation2019/sis_v_cmd' to = '/dsb_evaluation2019/sis/v_cmd'/>
