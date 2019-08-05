@@ -69,7 +69,7 @@ sis_bias_v_dsb_evaluation2019_dev_writer -->
         type = "relay.py">
     <remap from = '/dev/cpz3177/rsw0/ch' to = '/dev/cpz3177/rsw0/ch2'/>
         <param name = "config_file"
-               value = "$(find necst-dsb_evaluation2019)/node_conf/sis_bias_i_reader.conf" />
+               value = "$(find necst-dsb_evaluation2019)/node_conf/sis_bias_v_reader.conf" />
 
   </node>
 
