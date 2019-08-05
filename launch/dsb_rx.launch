@@ -83,6 +83,20 @@ sis_bias_v_dsb_evaluation2019_dev_writer -->
 
   </node>
 
+sis_power_reader.conf
+
+<!--sis_bias_v_reader-->
+
+<node pkg = "necst-dsb_evaluation2019"
+      name = "sis_power_reader"
+      type = "relay.py">
+  <remap from = '/sis_i_cmd' to = '/dsb_evaluation2019/sis/i'/>
+  <remap from = '/dev/cpz3177/rsw0/ch' to = '/dev/cpz3177/rsw0/ch10'/>
+      <param name = "config_file"
+             value = "$(find necst-dsb_evaluation2019)/node_conf/sis_power_reader.conf" />
+
+</node>
+
 <!--loatt_section-->
 
 <!--
