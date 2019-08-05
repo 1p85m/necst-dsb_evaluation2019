@@ -1,0 +1,8 @@
+<launch>
+
+<include file="$(find find necst-dsb_evaluation2019)/launch/tz_rx.launch"/>
+<include file="$(find find necst-dsb_evaluation2019)/launch/cpz3177.launch"/>
+<include file="$(find find necst-dsb_evaluation2019)/launch/cpz340816.launch"/>
+
+
+</launch>
