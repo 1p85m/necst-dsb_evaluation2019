@@ -7,7 +7,6 @@ sis_bias_v_dsb_evaluation2019_dev_writer -->
   <node pkg = "necst-dsb_evaluation2019"
         name = "sis_bias_v_dsb_evaluation2019_dev_writwer"
         type = "relay.py">
-    <remap from = '/dsb_evaluation2019/sis_v_cmd' to = '/dsb_evaluation2019/sis/v_cmd'/>
     <remap from = '/dev/cpz340816/rsw0/ch' to = '/dev/cpz340816/rsw0/ch1'/>
     <param name = "config_file"
            value = "$(find necst-dsb_evaluation2019)/node_conf/sis_bias_v_dsb_evaluation2019_dev_writer.conf" />
@@ -18,8 +17,6 @@ sis_bias_v_dsb_evaluation2019_dev_writer -->
   <node pkg = "necst-dsb_evaluation2019"
         name = "sis_bias_vgap_dsb_evaluation2019_writer"
         type = "relay.py">
-    <remap from = '/dsb_evaluation2019/sis_vgap_cmd' to = '/dsb_evaluation2019/sis/vgap_cmd'/>
-    <remap from = '/dsb_evaluation2019/sis_v_cmd' to = '/dsb_evaluation2019/sis/v_cmd'/>
     <param name = "config_file"
            value = "$(find necst-dsb_evaluation2019)/node_conf/sis_bias_vgap_dsb_evaluation2019_writer.conf" />
 
@@ -30,8 +27,6 @@ sis_bias_v_dsb_evaluation2019_dev_writer -->
   <node pkg = "necst-dsb_evaluation2019"
         name = "sis_bias_vp_writer"
         type = "relay.py">
-    <remap from = '/dsb_evaluation2019/sis_vp_cmd' to = '/dsb_evaluation2019/sis/vp_cmd'/>
-    <remap from = '/dsb_evaluation2019/sis_v_cmd' to = '/dsb_evaluation2019/sis/v_cmd'/>
     <param name = "config_file"
            value = "$(find necst-dsb_evaluation2019)/node_conf/sis_bias_vp_dsb_evaluation2019_writer.conf" />
 
@@ -42,7 +37,6 @@ sis_bias_v_dsb_evaluation2019_dev_writer -->
   <node pkg = "necst-dsb_evaluation2019"
         name = "sis_bias_vgap_necst_dsb_evaluation2019"
         type = "relay.py">
-    <remap from = '/dsb_evaluation2019/sis_vgap_cmd' to = '/dsb_evaluation2019/sis/vgap_cmd'/>
     <param name = "config_file"
            value = "$(find necst-dsb_evaluation2019)/node_conf/sis_bias_vgap_necst_dsb_evaluation2019_writer.conf" />
   </node>
@@ -52,8 +46,6 @@ sis_bias_v_dsb_evaluation2019_dev_writer -->
   <node pkg = "necst-dsb_evaluation2019"
         name = "sis_bias_vp_necst_dsb_evaluation2019_writer"
         type = "relay.py">
-    <remap from = '/necst/rx_sisdsb/vp_cmd' to = '/necst/rx_sisdsb/vp1_cmd'/>
-    <remap from = '/dsb_evaluation2019/sis_vp_cmd' to = '/dsb_evaluation2019/sis/vp_cmd'/>
     <param name = "config_file"
            value = "$(find necst-dsb_evaluation2019)/node_conf/sis_bias_vp_necst_dsb_evaluation2019_writer.conf" />
 
@@ -64,7 +56,6 @@ sis_bias_v_dsb_evaluation2019_dev_writer -->
   <node pkg = "necst-dsb_evaluation2019"
         name = "sis_bias_i_reader"
         type = "relay.py">
-    <remap from = '/sis_i_cmd' to = '/dsb_evaluation2019/sis/i'/>
     <remap from = '/dev/cpz3177/rsw0/ch' to = '/dev/cpz3177/rsw0/ch1'/>
     <param name = "config_file"
            value = "$(find necst-dsb_evaluation2019)/node_conf/sis_bias_i_reader.conf" />
@@ -76,21 +67,18 @@ sis_bias_v_dsb_evaluation2019_dev_writer -->
   <node pkg = "necst-dsb_evaluation2019"
         name = "sis_bias_v_reader"
         type = "relay.py">
-    <remap from = '/sis_i_cmd' to = '/dsb_evaluation2019/sis/i'/>
     <remap from = '/dev/cpz3177/rsw0/ch' to = '/dev/cpz3177/rsw0/ch2'/>
         <param name = "config_file"
                value = "$(find necst-dsb_evaluation2019)/node_conf/sis_bias_i_reader.conf" />
 
   </node>
 
-sis_power_reader.conf
 
 <!--sis_bias_v_reader-->
 
 <node pkg = "necst-dsb_evaluation2019"
       name = "sis_power_reader"
       type = "relay.py">
-  <remap from = '/sis_i_cmd' to = '/dsb_evaluation2019/sis/i'/>
   <remap from = '/dev/cpz3177/rsw0/ch' to = '/dev/cpz3177/rsw0/ch10'/>
       <param name = "config_file"
              value = "$(find necst-dsb_evaluation2019)/node_conf/sis_power_reader.conf" />
