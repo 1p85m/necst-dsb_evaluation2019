@@ -7,7 +7,6 @@ sis_bias_v_dsb_evaluation2019_dev_writer -->
   <node pkg = "necst-dsb_evaluation2019"
         name = "sis_bias_v_dsb_evaluation2019_dev_writwer"
         type = "relay.py">
-    <remap from = '/dev/cpz340816/rsw0/ch' to = '/dev/cpz340816/rsw0/ch1'/>
     <param name = "config_file"
            value = "$(find necst-dsb_evaluation2019)/node_conf/sis_bias_v_dsb_evaluation2019_dev_writer.conf" />
   </node>
