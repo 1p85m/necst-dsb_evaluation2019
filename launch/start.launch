@@ -1,7 +1,9 @@
 <launch>
 
 <include file="$(find necst-dsb_evaluation2019)/launch/dsb_rx.launch"/>
+<!--
 <include file="$(find necst-dsb_evaluation2019)/launch/rospkg-pyinterface.launch"/>
+-->
 <include file="$(find necst-dsb_evaluation2019)/launch/rospkg-ogameasure.launch"/>
 <include file="$(find necst-dsb_evaluation2019)/launch/jupyter.launch"/>
 
