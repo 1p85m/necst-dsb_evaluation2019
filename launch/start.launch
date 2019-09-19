@@ -1,8 +1,8 @@
 <launch>
 
 <include file="$(find necst-dsb_evaluation2019)/launch/dsb_rx.launch"/>
-<include file="$(find necst-dsb_evaluation2019)/launch/cpz3177.launch"/>
-<include file="$(find necst-dsb_evaluation2019)/launch/cpz340816.launch"/>
-<include file="$(find necst-dsb_evaluation2019)/launch/ma24126a.launch"/>
+<include file="$(find necst-dsb_evaluation2019)/launch/rospkg-pyinterface.launch"/>
+<include file="$(find necst-dsb_evaluation2019)/launch/rospkg-ogameasure.launch"/>
+<include file="$(find necst-dsb_evaluation2019)/launch/jupyter.launch"/>
 
 </launch>

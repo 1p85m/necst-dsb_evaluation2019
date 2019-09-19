@@ -9,8 +9,6 @@
 
     <remap from = '/dev/ma24126a/__port__/ch1' to = '/dev/ma24126a/ttyACM1/ch1'/>
 
-
-
   </node>
 
 </launch>

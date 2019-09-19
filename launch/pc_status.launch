@@ -1,0 +1,33 @@
+
+<launch>
+  <machine name="hinotoritz_fac" address="192.168.100.180" env-loader="/root/ros/devel/env.sh" user="root" password="root"  />
+  <machine name="hinotoritz" address="192.168.100.188" env-loader="/root/ros/devel/env.sh" user="hinotoritz" password="hinotoritz"  />
+
+  <node pkg = "necst-core"
+        name = "pc_status_hinotoritz_fac"
+        type = "pc_status.py"
+        required="true"
+        output="screen"
+        machine="hinotoritz_fac">
+    <remap from = '/core/pc_status/cpu' to = '/core/pc_status/hinotoritz_fac/cpu'/>
+    <remap from = '/core/pc_status/mem' to = '/core/pc_status/hinotoritz_fac/mem'/>
+    <remap from = '/core/pc_status/disk' to = '/core/pc_status/hinotoritz_fac/disk'/>
+    <remap from = '/core/pc_status/login' to = '/core/pc_status/hinotoritz_fac/login'/>
+    <remap from = '/core/pc_status/proc' to = '/core/pc_status/hinotoritz_fac/proc'/>
+
+  </node>
+
+  <node pkg = "necst-core"
+        name = "pc_status_hinotoritz"
+        type = "pc_status.py"
+        required="true"
+        output="screen"
+        machine="hinotoritz">
+    <remap from = '/core/pc_status/cpu' to = '/core/pc_status/hinotoritz/cpu'/>
+    <remap from = '/core/pc_status/mem' to = '/core/pc_status/hinotoritz/mem'/>
+    <remap from = '/core/pc_status/disk' to = '/core/pc_status/hinotoritz/disk'/>
+    <remap from = '/core/pc_status/login' to = '/core/pc_status/hinotoritz/login'/>
+    <remap from = '/core/pc_status/proc' to = '/core/pc_status/hinotoritz/proc'/>
+
+  </node>
+</launch>
