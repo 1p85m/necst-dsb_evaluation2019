@@ -11,6 +11,7 @@ sis_bias_v_dsb_evaluation2019_dev_writer -->
            value = "$(find necst-dsb_evaluation2019)/node_conf/sis_bias_v_dsb_evaluation2019_dev_writer.conf" />
   </node>
 
+
 <!--sis_bias_vgap_dsb_evaluation2019_writer-->
 
   <node pkg = "necst-dsb_evaluation2019"
@@ -49,6 +50,15 @@ sis_bias_v_dsb_evaluation2019_dev_writer -->
            value = "$(find necst-dsb_evaluation2019)/node_conf/sis_bias_vp_necst_dsb_evaluation2019_writer.conf" />
 
   </node>
+
+  <node pkg = "necst-dsb_evaluation2019"
+        name = "sis_bias_v_necst_dsb_evaluation2019_writer"
+        type = "relay.py">
+    <param name = "config_file"
+           value = "$(find necst-dsb_evaluation2019)/node_conf/sis_bias_v_necst_dsb_evaluation2019_writer.conf" />
+
+  </node>
+
 
 <!--sis_bias_reader-->
 
