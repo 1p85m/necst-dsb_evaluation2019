@@ -1,5 +1,5 @@
 <launch>
-  <node pkg = "necst-1p85m2019"
+  <node pkg = "necst-dsb_evaluation2019"
         name = "xffts_total_power"
         type = "xffts_total_power.py"
         >
